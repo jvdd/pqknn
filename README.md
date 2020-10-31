@@ -35,7 +35,7 @@ When creating a ProductQuantizationKNN instance, one has to assign 2 hyperparame
 
 When training, i.e., compressing the train data, no other hyperparameters are required.
 
-When prediction, one has to assign 1 hyperparameter;
+When predicting, one has to assign 1 hyperparameter;
 * *k*: the k of k-nearest neighbors.
 
 ### Example usage
