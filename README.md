@@ -42,7 +42,7 @@ When predicting, one has to assign 1 hyperparameter;
 
 
 ```py
-from product_quatization import ProductQuantizationKNN
+from product_quantization import ProductQuantizationKNN
 
 # Fetch the train data & train labels + the test data
 train_data, train_labels = ...
