@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pqknn"
+version = "0.1.0"
+description = "Product quantization k-nearest neighbors search"
+authors = ["Jeroen Van Der Donckt"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.20.3"
+scikit-learn = "^0.24.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pandas = "^1.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
