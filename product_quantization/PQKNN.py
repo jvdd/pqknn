@@ -7,7 +7,7 @@ from typing import Callable
 import numpy as np
 from sklearn.cluster import KMeans
 
-from .util import log_nb_clusters_to_np_int_type, squared_euclidean_dist
+from .util import log_nb_clusters_to_np_int_type, euclidean_dist
 
 
 class ProductQuantizationKNN:
@@ -63,7 +63,7 @@ class ProductQuantizationKNN:
                 self.subvector_centroids[partition_idx] = partition_centroids
 
     def predict_single_sample(self, test_sample: np.ndarray, nearest_neighbors: int,
-                              calc_dist: Callable[[np.ndarray, np.ndarray], np.ndarray] = squared_euclidean_dist):
+                              calc_dist: Callable[[np.ndarray, np.ndarray], np.ndarray] = euclidean_dist):
         """ Predicts the label of the given test sample based on the PQKNN algorithm
 
         :param test_sample: the test sample (a 1D array).
@@ -121,7 +121,7 @@ class ProductQuantizationKNN:
         return selected_label
 
     def predict(self, test_data: np.ndarray, nearest_neighbors: int,
-                calc_dist: Callable[[np.ndarray, np.ndarray], np.ndarray] = squared_euclidean_dist) -> np.ndarray:
+                calc_dist: Callable[[np.ndarray, np.ndarray], np.ndarray] = euclidean_dist) -> np.ndarray:
         """ Predicts the label of the given test samples based on the PQKNN algorithm
 
         :param test_data: the samples, a 2D array where each row represents a sample.
